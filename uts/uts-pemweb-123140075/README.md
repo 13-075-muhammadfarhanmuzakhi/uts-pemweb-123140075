@@ -33,3 +33,7 @@ Pastikan Anda memiliki Node.js dan npm terinstal.
 ```bash
 git clone [https://github.com/13-075-muhammadfarhanmuzakhi/uts-pemweb-123140075.git](https://github.com/13-075-muhammadfarhanmuzakhi/uts-pemweb-123140075.git)
 cd uts-pemweb-123140075
+
+npm install
+
+npm run dev
