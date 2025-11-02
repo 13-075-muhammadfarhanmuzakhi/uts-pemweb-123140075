@@ -1,16 +1,35 @@
-# React + Vite
+# 🎮 UTS IF25-22014 - PENGEMBANGAN APLIKASI WEB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Proyek: Game Database Explorer (Studi Kasus NIM Akhir 5)
 
-Currently, two official plugins are available:
+| Informasi | Detail |
+| :--- | :--- |
+| **Nama** | Muhammad Farhan Muzakhi |
+| **NIM** | 123140075 |
+| **Mata Kuliah** | Pengembangan Aplikasi Web |
+| **Studi Kasus** | Digit Terakhir NIM: 5 (Game Database) |
+| **API** | RAWG Video Games API |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deskripsi Proyek
 
-## React Compiler
+Aplikasi web ini adalah sebuah Game Database Explorer yang dibangun menggunakan **ReactJS** dan **Vite** untuk memenuhi Ujian Tengah Semester (UTS) Pengembangan Aplikasi Web. Proyek ini diimplementasikan menggunakan Functional Components dan React Hooks (`useState`, `useEffect`) dengan styling CSS murni.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Fungsi utama aplikasi ini adalah memungkinkan pengguna untuk mencari, memfilter, mengurutkan, dan melihat detail dari berbagai judul game yang tersedia melalui RAWG API.
 
-## Expanding the ESLint configuration
+### Fitur Wajib yang Diimplementasikan
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Form Pencarian Game:** Input teks untuk mencari game berdasarkan judul.
+2.  **Filter Platform:** Checkbox untuk memfilter game berdasarkan platform (PC, PlayStation, Xbox).
+3.  **Tabel/Grid Game:** Menampilkan hasil pencarian dalam bentuk *grid card* yang responsif, mencakup *cover*, *title*, *rating*, dan *release date*.
+4.  **Detail Game:** Menampilkan detail lengkap game (*description*, *genres*, *screenshots*) melalui modal saat *card* diklik.
+5.  **Sort Data:** Dropdown untuk mengurutkan hasil berdasarkan *Rating* tertinggi atau *Release Date* terbaru.
+
+## Instalasi dan Menjalankan Proyek
+
+Pastikan Anda memiliki Node.js dan npm terinstal.
+
+### A. Kloning Repositori
+
+```bash
+git clone [https://github.com/13-075-muhammadfarhanmuzakhi/uts-pemweb-123140075.git](https://github.com/13-075-muhammadfarhanmuzakhi/uts-pemweb-123140075.git)
+cd uts-pemweb-123140075
