@@ -1,42 +1,212 @@
+/* CPMK0501: Selector Jenis 1: Type Selector (body, h1) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.app-header {
+  padding: 20px;
+  background-color: #3a416e;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* CPMK0501: Selector Jenis 2: Class Selector (.search-form, .game-card) */
+.search-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CPMK0501: Selector Jenis 3: Kombinasi Selector (Input inside form-group) */
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* CPMK0501: Flexbox */
+.platform-group {
+  margin-top: 15px;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.checkbox-container input[type="checkbox"] + label {
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* CPMK0501: Pseudo-classes (:hover) */
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* CPMK0501: CSS Grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 kolom */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.game-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.game-title {
+  font-size: 1.1em;
+  color: #3a416e;
+  margin-bottom: 10px;
+  /* CPMK0501: Pseudo-classes (:first-child) */
+  font-weight: bold;
+}
+
+.highlight-text {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.loading-state,
+.no-result {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  padding: 40px;
+}
+
+/* --- Modal Styling --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.detail-info {
+  margin-top: 20px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* CPMK0501: Responsive Design dengan Media Queries */
+/* Tablet */
+@media (max-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom di tablet */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .game-grid {
+    grid-template-columns: 1fr; /* 1 kolom di mobile */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .modal-content {
+    margin: 10px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
+  }
+  .app-header h1 {
+    font-size: 1.5em;
+  }
 }
